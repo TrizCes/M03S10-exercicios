@@ -1,0 +1,106 @@
+# Arquivos de compilação
+bin/
+obj/
+
+# Logs e arquivos temporários
+*.log
+*.config.user
+*.bak
+*.backup
+*.swp
+Thumbs.db
+
+# Visual Studio
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+.idea/.name
+.idea/.rider
+.idea/inspectionProfiles/
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+
+# Dependências NuGet
+packages/
+*.nupkg
+nuget.exe
+NuGet.config
+
+# Arquivos de compilação MSBuild
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+.idea/workspace.xml
+
+# Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Hot Chocolate GraphQL
+# Pasta de cache do Hot Chocolate
+/.hotchocolate/
+# Arquivo de esquema gerado automaticamente
+GeneratedSchema.graphql

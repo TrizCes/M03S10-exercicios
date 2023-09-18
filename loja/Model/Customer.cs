@@ -20,17 +20,6 @@ namespace loja.Model
             this.Name = name;
             this.Email = email;
         }
-        public Customer(string name, string email)
-        {
-            this.Id = numRandom();
-            this.Name = name;
-            this.Email = email;
-        }
 
-        private int numRandom()
-        {
-            Random random = new Random();
-            return random.Next(5, 1001);
-        }
     }
 }

@@ -6,12 +6,24 @@ namespace loja.Querys
     {
         public List<Customer> Customers = new List<Customer>
         {
-            new Customer ("Nini Ceschini", "nini@email.com"),
-            new Customer ("Fosco Doe", "Fosco@email.com"),
-            new Customer ("Guaxinim Doe", "Guaxinim@email.com"),
-            new Customer ("Laranja Doe", "Laranja@email.com"),
+            new Customer (1, "Nini Ceschini", "nini@email.com"),
+            new Customer (2, "Fosco Doe", "Fosco@email.com"),
+            new Customer (3, "Guaxinim Doe", "Guaxinim@email.com"),
+            new Customer (4, "Laranja Doe", "Laranja@email.com"),
         };
 
+        public List<Order> Orders = new List<Order> {
+            new Order (1, 1, new DateTime(10-01-01)),
+            new Order (2, 1, new DateTime(10-02-01)),
+            new Order (3, 1, new DateTime(10-02-03)),
+            new Order (4, 2, new DateTime(10-01-01)),
+            new Order (5, 2, new DateTime(10-02-01)),
+            new Order (6, 2, new DateTime(10-02-03)),
+            new Order (7, 3, new DateTime(10-02-01)),
+            new Order (8, 3, new DateTime(10-02-03)),
+            new Order (9, 4, new DateTime(23-01-01)),
+            new Order (10, 4, new DateTime(23-02-01)),
+        };
         public Query() { }
         public List<Product> GetAllProducts()
         {
@@ -50,6 +62,11 @@ namespace loja.Querys
         public Customer GetCustomer(int id)
         {
             return Customers.Find(c => c.Id == id);
+        }
+
+        public List<Order> GetOrderByCustomerId(int customerId)
+        {
+            return Orders.FindAll(o => o.CustomerId == customerId);
         }
     }
 }

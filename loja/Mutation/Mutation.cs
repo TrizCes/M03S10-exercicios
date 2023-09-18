@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using loja.Mock;
+using loja.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace loja.Mutation
@@ -26,6 +27,16 @@ namespace loja.Mutation
 
             _database.Products.Add(newProduct);
             return newProduct;
+        }
+        public Customer UpdateCustomerEmail(string id, string newEmail)
+        {
+            Customer customerToUpdate = _database.Customers.FirstOrDefault(c => c.Id == int.Parse(id));
+            if (customerToUpdate == null)
+            {
+                throw new ArgumentException("Não encontramos o cliente");
+            }
+            customerToUpdate.Email = newEmail;
+            return customerToUpdate;
         }
     }
 }
